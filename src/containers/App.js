@@ -4,13 +4,17 @@ import style from './App.css';
 import Title from '../components/Title';
 
 class App extends React.Component {
-    constructor(props) {
+    constructor(props){
         super(props);
         this.state = {
-            data: []
+            data: [
+                {
+                    id: 1,
+                    text: 'Code on Kodilla'
+                }, 
+              ]
         };
     }
-
     addTodo(val) {
         const todo = {
             text: val,
@@ -29,7 +33,7 @@ class App extends React.Component {
         return (
             <div className={style.TodoApp}>
                 Tutaj pojawią się komponenty naszej aplikacji.
-                <Title title={'ToDo'} count={3} />
+                <Title title={'ToDo'} dataList={this.state.data.length}/>
             </div>
         );
     }

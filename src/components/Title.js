@@ -4,7 +4,7 @@ const Title = props => {
     return (
         <div>
             <h1>{props.title}</h1>
-            <p>Ilość zadań: {props.count}</p>
+            <p>Ilość zadań: {props.dataList}</p>
         </div>
     );
 }
